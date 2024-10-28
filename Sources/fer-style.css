@@ -1,0 +1,316 @@
+html {overflow: hidden;}
+
+#main-menu {
+    height: 100%;
+    width: 100%;
+    background-image: url(../Materials/menu_dithered.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 5s ease;
+    visibility: visible;
+    z-index: 2220;
+}
+
+#intro {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 2221;
+    visibility: visible;
+}
+
+#main-menu #startGry {
+    text-align: center;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 22%;
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 2222;
+}
+
+#main-menu #startMultigry {
+    text-align: center;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 18%;
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 2222;
+}
+
+#main-menu #creditsy {
+    text-align: center;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 14%;
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 2222;
+}
+
+#main-menu #achievements {
+    text-align: center;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 10.5%;
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 2222;
+}
+
+#main-menu #version {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    bottom: -11px;
+    left: 10px;
+    z-index: 2222;
+}
+
+#credits {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    visibility: hidden;
+    height: 90%;
+    width: 60%;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border: 3px dotted rgb(170, 170, 170);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    z-index: 2223;
+}
+
+#achievy {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    visibility: hidden;
+    height: 90%;
+    width: 60%;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border: 3px dotted rgb(170, 170, 170);
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+    z-index: 2223;
+}
+
+#intro {
+    opacity: 1;
+    transition: opacity 5s ease;
+}
+
+#intro #pic1,#pic2,#text1,#text2 {
+    visibility: hidden;
+    font-style: 'Courier New', monospace;
+
+}
+
+#intro #pic1 {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    transition: opacity 0.7s ease-in;
+}
+
+#intro #pic2 {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    transition: opacity 0.7s ease-in;
+}
+
+#intro #text1 {
+    opacity: 0;
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    margin-inline: auto;
+    bottom: 50%;
+    width: 30%;
+    transition: opacity 0.7s ease-in;
+    color: white;
+    text-align: center;
+}
+
+#intro #text2 {
+    opacity: 0;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    margin-inline: auto;
+    bottom: 50%;
+    width: 30%;
+    transition: opacity 0.7s ease-in;
+    color: white;
+    text-align: center;
+}
+
+#intro #pic3 {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    transition: opacity 0.7s ease-in;
+}
+
+#intro #text3 {
+    opacity: 0;
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    margin-inline: auto;
+    bottom: 50%;
+    width: 30%;
+    transition: opacity 0.7s ease-in;
+    color: white;
+    text-align: center;
+}
+
+#intro #text4 {
+    opacity: 0;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    margin-inline: auto;
+    bottom: 50%;
+    width: 30%;
+    transition: opacity 0.7s ease-in;
+    color: white;
+    text-align: center;
+}
+
+#partyhall {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    background-image: url('Materials/partyhall1.png');
+    z-index: 2999;
+}
+
+#partyhall #dealerDoor {
+    width: 20%;
+    height: 65%;
+    position: absolute;
+    left: 20%;
+    bottom: 6.5%;
+    box-shadow: black 0 0 4px 4px;
+    cursor: grab;
+    pointer-events: auto;
+    z-index: 3000;
+}
+
+/* Poniższa funkcja powstała by upewnić się że nie będzie sie rzucało w oczy jeżeli bedzie problem z ładowaniem zdjęć dla partyhallu */
+body {
+    transition: background-color 0.2;
+}
+
+#dealerRoom {
+    visibility: hidden;
+    position: fixed;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#dealerRoom #table {
+    z-index: 3002;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+    left: 0;
+}
+
+#revolver {
+    visibility: visible;
+    z-index: 3002;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+}
+
+#dealerRoom #dealer {
+    visibility: visible;
+    opacity: 3001;
+    transition: opacity 1.3s ease-in;
+    z-index: 3001;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 39.5%;
+    margin-inline: auto;
+}
+
+#general-release {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    z-index: 3006;
+}
+
+#dealer-release {
+    visibility: hidden;
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: 90%;
+    height: 20%;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    font-family: 'Courier New', monospace;
+    z-index: 3006;
+}
