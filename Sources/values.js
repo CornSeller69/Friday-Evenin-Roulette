@@ -37,3 +37,4 @@ let changeHallInterval; // Usuwanie kolorkowej hali. Zrobione w sposób obejści
 let mus1loop; // j.w.
 let mus2loop; // j.w.
 let hallRepeatBlock = false; // podobnie co do j.w.
+let dealerAskStage = 0; // sprawdza która część dialogu wstępnego dla krupiera ma być ukazana.

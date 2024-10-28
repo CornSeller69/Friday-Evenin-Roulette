@@ -131,6 +131,7 @@ html {overflow: hidden;}
 #intro {
     opacity: 1;
     transition: opacity 5s ease;
+    cursor: alias;
 }
 
 #intro #pic1,#pic2,#text1,#text2 {
@@ -297,20 +298,58 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.2s ease-in;
-    z-index: 3006;
+    z-index: 3007;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 90%;
+    margin-inline: auto;
 }
 
-#dealer-release {
+#dealer_release {
     visibility: hidden;
     position: absolute;
     bottom: 3%;
     left: 0;
     right: 0;
     margin-inline: auto;
+    border: 3px dotted rgb(170, 170, 170);
     width: 90%;
     height: 20%;
     background-color: rgb(58, 58, 58);
     color: white;
     font-family: 'Courier New', monospace;
-    z-index: 3006;
+    z-index: 3009;
+}
+
+#dealer_release button {
+    z-index: 3010;
+    cursor: alias;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    margin-inline: auto;
+}
+
+.dialogue-box h2 {
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    font-size: 55px;
+}
+
+.dialogue-box p:not(.dialogue-ignore) {
+    position: absolute;
+    bottom: -3px;
+    left: 5px;
+    font-size: 35px;
+}
+
+.dialogue-box .dialogue-ignore {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: white;
 }

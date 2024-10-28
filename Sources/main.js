@@ -28,6 +28,7 @@ function closeCredits() {
 
 function startCampaign() {
     document.body.style.backgroundColor = 'white'; // bo powinno być ale na początku dałem black by sie nie wyróżniało przed załadowaniem css
+    document.getElementById("styleLoadTest").style.visibility = 'hidden'; // mały tekścik który ostrzega jeżeli styl się spierdolił
     sfx_newgame.play();
     document.getElementById("startGry").style.pointerEvents = 'none';
     document.getElementById("startMultigry").style.pointerEvents = 'none';
@@ -104,7 +105,7 @@ function gameBegin() {
     mus1loop = setInterval(function loopMus() {
         mus_party.currentTime = 0;
         mus_party.play();
-    },43800)
+    },43250)
     document.getElementById("partyhall").style.visibility = 'visible';
     document.getElementById("partyhall").style.opacity = 1;
     document.body.style.backgroundColor = 'black';
@@ -146,14 +147,39 @@ function enterDealer() {
     mus2loop = setInterval(function loopMus() {
         mus_stage1.currentTime = 0;
         mus_stage1.play();
-    },43800)
+    },43250)
+    // --
+    let dealerRoom = document.getElementById("dealerRoom");
+    dealerRoom.style.visibility = 'visible';
+    dealerRoom.style.opacity = 1; console.log(dealerRoom); // Debugging
+    let dealer = document.getElementById("dealer");
+    let table = document.getElementById("table");
+    let revolver = document.getElementById("revolver");
+    console.log(dealer, table, revolver); // Debugging
+    // --
     document.getElementById("partyhall").style.opacity = 0;
     setTimeout(function() {document.getElementById("partyhall").style.visibility = 'hidden'},200)
     document.getElementById("dealerRoom").style.visibility = 'visible';
     document.getElementById("dealerRoom").style.opacity = 1;
-    setTimeout(dealerAsk(),950);
+    document.getElementById("dealerRoom").style.pointerEvents = 'auto';
+    setTimeout(dealerAsk,950);
 }
 
 function dealerAsk() {
-    document.getElementById("dealer_release").style.visibility = 'visible';
+    if (dealerAskStage == 0) {
+        console.log(dealerAskStage);
+        document.getElementById("dealer_release").style.visibility = 'visible';
+        document.getElementById("dealer_release").innerHTML = '<h2>KRUPIER:</h2><p>Proszę, podpisz dokument.</p><p class="dialogue-ignore">Kliknij, aby kontynuować...</p>';
+        dealerAskStage++;
+    }
+    else if (dealerAskStage == 1) {
+        console.log(dealerAskStage);
+        document.getElementById("general-release").style.visibility = 'visible';
+        document.getElementById("general-release").style.opacity = 1;
+        dealerAskStage++;
+    }
+    else if (dealerAskStage == 2) {
+        document.getElementById("dealer_release").innerHTML = '<h2>KRUPIER:</h2><p>Proszę, podpisz dokument.</p><p class="dialogue-ignore">Kliknij, aby kontynuować...</p>';
+        // zmień powyższe przy edytowaniu tego później; pozdrawiam, ty z niedalekiej przeszłości!
+    }
 }

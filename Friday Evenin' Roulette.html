@@ -7,12 +7,13 @@
     <link rel="shortcut icon" href="Materials/favicon.webp" type="image/x-icon">
 </head>
 <body style="background-color: black;">
+    <p style="color: white; font-size: 40px;" id="styleLoadTest">Jeżeli widzisz tą wiadomość, to odśwież stronę, gdyż style się nie załadowały w pełni!</p>
     <div id="main-menu">
         <h1 onclick="startCampaign()" id="startGry">Tryb Fabularny</h1>
         <h1 onclick="startMP()" id="startMultigry">Tryb Multiplayer</h1>
         <h1 onclick="showCredits()" id="creditsy">Autorzy</h1>
         <h1 onclick="showAchieves()" id="achievements">Osiągnięcia</h1>
-        <p id="version">v0.4</p> <!-- PAMIĘTAJ, ABY ZMIENIAĆ WERSJĘ!!! -->
+        <p id="version">v0.5</p> <!-- PAMIĘTAJ, ABY ZMIENIAĆ WERSJĘ!!! -->
         <div id="credits">
             <button onclick="closeCredits()" style="height: 5%; width: 5%; background-color: rgb(88, 88, 88); font-size: 110%; color: white; border: 1px solid rgb(170, 170, 170); cursor: pointer;">X</button>
             <h1 style="text-align: center; font-size: 60px;">Autorzy</h1>
@@ -43,10 +44,10 @@
         <img src="Materials/Sprites/dealer.png" id="dealer">
         <img src="Materials/table.png" id="table">
         <img src="Materials/gun.png" id="revolver">
-        <div id="dealer_release">
-            <h3>Krupier:</h3>
-            <p>Proszę, podpisz dokument.</p></div>
-        <img src="Materials/release.png" id="general-release">
+        <div id="dealer_release" class="dialogue-box"><button onclick="dealerAsk()">test</button></div>
+        <div id="general-release">
+            <img src="Materials/release.png">
+        </div>
     </div>
 </body>
 <script src="Sources/values.js"></script>
