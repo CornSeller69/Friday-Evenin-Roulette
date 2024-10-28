@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friday Evenin' Roulette</title>
+    <link rel="shortcut icon" href="Materials/favicon.webp" type="image/x-icon">
+</head>
+<body style="background-color: black;">
+    <div id="main-menu">
+        <h1 onclick="startCampaign()" id="startGry">Tryb Fabularny</h1>
+        <h1 onclick="startMP()" id="startMultigry">Tryb Multiplayer</h1>
+        <h1 onclick="showCredits()" id="creditsy">Autorzy</h1>
+        <h1 onclick="showAchieves()" id="achievements">Osiągnięcia</h1>
+        <p id="version">v0.4</p> <!-- PAMIĘTAJ, ABY ZMIENIAĆ WERSJĘ!!! -->
+        <div id="credits">
+            <button onclick="closeCredits()" style="height: 5%; width: 5%; background-color: rgb(88, 88, 88); font-size: 110%; color: white; border: 1px solid rgb(170, 170, 170); cursor: pointer;">X</button>
+            <h1 style="text-align: center; font-size: 60px;">Autorzy</h1>
+            <h2 style="text-align: center;"><br>Kod i ogólny design: CornSeller<br><br>Muzyka: Mike Klubnika (ze ścieżki dźwiękowej Buckshot Roulette)<br><br>Jako Krupier: idk_10<br><br>Jako Protagonista: Jakub Paga</h2>
+            <a href="https://github.com/CornSeller69/Friday-Evenin-Roulette/tree/main" style="color: white; text-align: center;" target="_blank"><h2><br>Strona na GitHubie</h2></a>
+            <img src="Materials/logo.png" alt="pozdrowienia od ekipy Friday Evenin' Roulette" style="position: absolute; bottom: 0; left: 0;">
+        </div>
+        <div id="achievy">
+            <button onclick="closeAchieves()" style="height: 5%; width: 5%; background-color: rgb(88, 88, 88); font-size: 110%; color: white; border: 1px solid rgb(170, 170, 170); cursor: pointer;">X</button>
+            <h1 style="text-align: center; font-size: 60px;">Osiągnięcia</h1>
+            <img src="Materials/achievement1.png" alt="unfinished business" style="width: 20%; position: absolute; left: 10px;"><h2 style="margin-left: 23%;">Nieskończone Interesy</h2>
+            <br><br><br><br><br><br><br><br><br><br><br><br><h1>WCIĄŻ W PRODUKCJI</h1>
+        </div>
+    </div>
+    <div id="intro">
+        <img src="Materials/Sprites/protagonist.png" id="pic1">
+        <h1 id="text1">Ceny powoli wzrastają, prawie mnie na nic już nie stać...</h1>
+        <img src="Materials/Sprites/protagonist_pills.png" id="pic2">
+        <h1 id="text2">Nie byłby to aż tak gigantyczny problem, gdyby nie to, że potrzebuję drogich leków od handlarzy narkotykowych.</h1>
+        <img src="Materials/club.png" id="pic3">
+        <h1 id="text3">Podobno w pobliskim opuszczonym magazynie organizują klub nocny. Podobno ktoś tam będzie rozgrywać rosyjską ruletkę za pieniądze...</h1>
+        <h1 id="text4">Nie ważne jest ryzyko. Jeżeli nie zabije mnie strzał w łeb podczas tej gry, to brak leków już tak.</h1>
+    </div>
+    <div id="partyhall">
+        <img src="Materials/door.png" onclick="enterDealer()" id="dealerDoor">
+    </div>
+    <div id="dealerRoom">
+        <img src="Materials/Sprites/dealer.png" id="dealer">
+        <img src="Materials/table.png" id="table">
+        <img src="Materials/gun.png" id="revolver">
+        <div id="dealer_release">
+            <h3>Krupier:</h3>
+            <p>Proszę, podpisz dokument.</p></div>
+        <img src="Materials/release.png" id="general-release">
+    </div>
+</body>
+<script src="Sources/values.js"></script>
+<script src="Sources/main.js"></script>
+<link rel="stylesheet" href="Sources/fer-style.css">
+</html>
